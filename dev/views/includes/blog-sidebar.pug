@@ -1,0 +1,116 @@
+.blog-sidebar
+    // AboutMe Widget
+    .blog-widget
+        h4 About me
+        .about-me
+            hr
+            img(src="img/about-me.jpg" alt="About me")
+            p 
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repudiandae sunt quos dicta repellendus iusto 
+                | quasi possimus nostrum provident obcaecati hic eius aut iste harum amet delectus accusantium placeat vero.
+    // Social Widget
+    .blog-widget
+        h4 Follow Me
+        hr
+        .social
+            .row.inner
+                .col
+                    a(href="#")
+                        i.facebook.fab.fa-facebook-f
+                    span
+                        | 150
+                        br
+                        | Likes
+                        
+                .col
+                    a(href="#")
+                        i.twitter.fab.fa-twitter
+                    span
+                        | 343
+                        br
+                        | Followers
+            .row.inner
+                .col
+                    a(href="#")
+                        i.instagram.fab.fa-instagram
+                    span
+                        | 195
+                        br
+                        | Followers
+                .col
+                    a(href="#")
+                        i.rss.fas.fa-rss
+                    span
+                        | 580
+                        br
+                        | Subscribers
+    // Categories Widget
+    .blog-widget
+        h4 Categories
+        hr
+        ul.list
+            li 
+                a(href="#") Travel
+                    .detail (5)
+            li 
+                a(href="#") Food
+                    .detail (15)
+            li 
+                a(href="#") Lakes
+                    .detail (1)
+            li 
+                a(href="#") Mountains
+                    .detail (6)
+            li 
+                a(href="#") Partners
+                    .detail (8)
+    // Tags Widget
+    .blog-widget.tags
+        h4 Tags
+        hr
+        ul.horizontal-list
+            li 
+                a(href="#") Lorem 
+            li 
+                a(href="#") ipsum 
+            li 
+                a(href="#") dolor 
+            li 
+                a(href="#") sit 
+            li 
+                a(href="#") amet 
+            li 
+                a(href="#") consectetur 
+            li 
+                a(href="#") dipisicing 
+            li 
+                a(href="#") elit 
+            li 
+                a(href="#") Quod
+    // Newsletter Widget
+    .blog-widget
+        h4 Newsletter Signup
+        hr
+        form.input-group.mb-3
+            input.form-control.line-input(type='text' placeholder='Enter Email Address' aria-label='Enter Email Address')
+            .input-group-append
+                button.input-group-text(type='submit') Subscribe
+    // Newsletter Widget
+    .blog-widget.polls
+        h4 Polls
+        hr
+        .content
+            .subtitle What do you thing about this?
+            form
+                .form-check
+                    input#exampleRadios1.form-check-input(type="radio" name="exampleRadios" value="option1" checked="")
+                    label.form-check-label(for="exampleRadios1")
+                        | It's Good !
+                .form-check
+                    input#exampleRadios2.form-check-input(type="radio" name="exampleRadios" value="option2")
+                    label.form-check-label(for="exampleRadios2")
+                        | Don't know...
+                .form-check.disabled
+                    input#exampleRadios3.form-check-input(type="radio" name="exampleRadios" value="option3" disabled="")
+                    label.form-check-label(for="exampleRadios3")
+                        | It's Bad !

@@ -1,0 +1,106 @@
+// ===========================
+// Navigation Fixed Top NabVar
+// ===========================
+
+nav#nav-fixed.main-navigation.navbar.fixed-top.navbar-expand-lg.navbar-light.Hidden
+	a.navbar-brand(href='#') 
+		.site-brand
+			span.bold Tell 
+			span.thin.dark-text Something
+	button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar-fixed-top', aria-controls='navbar-fixed-top', aria-expanded='false', aria-label='Toggle navigation')
+		span.navbar-toggler-icon
+	#navbar-fixed-top.collapse.navbar-collapse
+		ul.navbar-nav.ml-auto
+			li.nav-item.active
+				a.nav-link(href='"/index.html"')
+					| Home 
+					span.sr-only (current)
+			li.nav-item
+				a.nav-link(href='#') Link
+			li.nav-item.dropdown
+				a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+					| Components
+				.dropdown-menu(aria-labelledby='navbarDropdown')
+					a(href="/docs/docs.html").dropdown-item Docs
+					
+			li.nav-item
+				a(href="/index.html#Contact").nav-link Contact Us
+
+// =======================
+// Navigation Top NavBar
+// =======================
+
+nav#nav-top.main-navigation.navbar.navbar-expand-lg.navbar-light.Hidden
+	a.navbar-brand(href='#') 
+		.site-brand
+			span.bold Tell 
+			span.thin.dark-text Something
+	button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar-top', aria-controls='navbar-top', aria-expanded='false', aria-label='Toggle navigation')
+		span.navbar-toggler-icon
+	#navbar-top.collapse.navbar-collapse
+		ul.navbar-nav.ml-auto
+			li.nav-item.active
+				a.nav-link(href='"/index.html"')
+					| Home 
+					span.sr-only (current)
+			li.nav-item
+				a.nav-link(href='#') Link
+			li.nav-item.dropdown
+				a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+					| Components
+				.dropdown-menu(aria-labelledby='navbarDropdown')
+					a(href="/docs/docs.html").dropdown-item Docs
+					
+			li.nav-item
+				a(href="/index.html#Contact").nav-link Contact Us
+
+// =======================
+// Full Screen Navigation
+// =======================
+
+
+// Top Nav Button
+#navfull-top-btn.navfull-button.navfull-top-button.Hidden
+	.toggle-button
+		span.bar.top
+		span.bar.middle
+		span.bar.bottom
+
+// Bottom Nav Button
+#navfull-bottom-btn.navfull-button.navfull-bottom-button.Hidden
+	.toggle-button
+		span.bar.top
+		span.bar.middle
+		span.bar.bottom
+ 
+ 
+nav#navfull.main-navigation.navfull.col-md-12
+	.left.col-md-6.col-xs-12
+		.menu-content
+			ul
+				li
+					a(href="index.html") HOME
+				li
+					a(href="blog.html") BLOG
+				li
+					a(href="docs/docs.html") DOCS
+				li
+					a(href="contact.html") CONTACT
+	.right.col-md-6
+		.overlay
+			.text
+				p Tell Something
+				hr.light-hr
+				p 
+					| Tell to the world who are you. 
+					br 
+					| Tell something nice,
+					br
+					| Tell something meaningfull.
+					br
+					| Teach something.
+					br
+					| Tell.
+.site-fixed-brand.centered-brand
+	span.bold Tell 
+	span.thin  Something

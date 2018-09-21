@@ -1,0 +1,243 @@
+@import mixins
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Montserrat:200,700,800,900')
+$font1: 'Crimson Text', serif
+$font2: 'Montserrat', sans-serif
+
+.theme-docs
+	p 
+		font-family: $font2
+		font-size: 1.1rem
+	h4
+		font-weight: bold
+		small
+			font-size: 1rem
+			&:hover
+				a
+					color: #383838
+	.panel
+		margin-bottom: 40px
+		.panel-body
+			padding: 20px
+			border: 2px solid #f5f7f9
+			border-bottom: 0
+		.panel-footer
+			background-color: #f5f7f9
+			pre
+				padding: 20px
+				margin: 0
+				border: none
+	.h5
+		line-height: 29px
+	.btn-pill,
+	.btn-shadow
+		outline: none
+	.icon-list
+		.icon
+			float: left
+			text-align: center
+			width: 50px
+			background: #ccc
+			margin: 5px
+			margin-bottom: 2px
+			font-size: 2rem
+			color: #000
+			border-radius: 2px
+			@include transition(0.2s)
+			&:hover
+				cursor: pointer
+				color: #262233
+				box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5)
+	.vertical-list
+		list-style-type: circle
+		padding-left: 40px 
+
+.docs-sidebar
+	
+	a
+		font-family: $font2
+		padding: 4px 10px
+		font-size: .9rem
+
+.code-no-bs
+	font-size: 1rem
+	pre
+		padding: 10px
+		background-color: #f5f7f9
+		code
+			display: block
+			&.html
+				> *
+					color: #2f6f9f
+					line-height: 20px
+
+				[class*=hljs-tag]
+					color: #2f6f9f
+
+				[class*=hljs-name]
+					color: #2f6f9f
+
+				[class*=hljs-attr]
+					color: #904242
+
+				[class*=hljs-string]
+					color: #8476d0
+
+			&.css
+				color: #2f6f9f
+				> *
+					color: #2f6f9f
+					line-height: 20px
+
+				[class*=hljs-keyword]
+					color: #069
+
+				[class*=hljs-number]
+					color: #f60
+
+.code-custom
+	color: #2f6f9f
+	font-size: 0.8rem
+
+.code-bs
+	font-size: 0.9rem
+	.hll
+		background-color: #ffc
+	.c
+		color: #999
+	.k
+		color: #069
+	.o
+		color: #555
+	.cm
+		color: #999
+	.cp
+		color: #099
+	.c1, .cs
+		color: #999
+	.gd
+		background-color: #fcc
+		border: 1px solid #c00
+	.ge
+		font-style: italic
+	.gr
+		color: #f00
+	.gh
+		color: #030
+	.gi
+		background-color: #cfc
+		border: 1px solid #0c0
+	.go
+		color: #aaa
+	.gp
+		color: #009
+	.gu
+		color: #030
+	.gt
+		color: #9c6
+	.kc, .kd, .kn, .kp, .kr
+		color: #069
+	.kt
+		color: #078
+	.m
+		color: #f60
+	.s
+		color: #8476d0
+	.na
+		color: #904242
+	.nb
+		color: #366
+	.nc
+		color: #0a8
+	.no
+		color: #360
+	.nd
+		color: #99f
+	.ni
+		color: #999
+	.ne
+		color: #c00
+	.nf
+		color: #c0f
+	.nl
+		color: #99f
+	.nn
+		color: #0cf
+	.nt
+		color: #2f6f9f
+	.nv
+		color: #033
+	.ow
+		color: #000
+	.w
+		color: #bbb
+	.mf, .mh, .mi, .mo
+		color: #f60
+	.sb, .sc
+		color: #c30
+	.sd
+		font-style: italic
+		color: #c30
+	.s2, .se, .sh
+		color: #c30
+	.si
+		color: #a00
+	.sx,.nx
+		color: #c30 !important
+	.sr
+		color: #3aa
+	.s1
+		color: #c30
+	.ss
+		color: #fc3
+	.bp
+		color: #366
+	.vc, .vg, .vi
+		color: #033
+	.il
+		color: #f60
+
+
+.bd-example-container
+	min-width: 16rem
+	max-width: 25rem
+	.bd-example-container-header
+		height: 1rem
+		margin-bottom: .5rem
+		background-color: #fff
+		border-radius: .25rem
+	.bd-example-container-sidebar
+		float: right
+		width: 4rem
+		height: 8rem
+		background-color: #80bdff
+		border-radius: .25rem
+	.bd-example-container-body
+		height: 8rem
+		margin-right: 4.5rem
+		background-color: #957bbe
+		border-radius: .25rem
+.bd-example-container-fluid
+	max-width: none
+
+.bd-callout
+	padding: 1.25rem
+	margin-top: 1.25rem
+	margin-bottom: 1.25rem
+	border: 1px solid #eee
+	border-left-width: .25rem
+	border-radius: .25rem
+
+
+.docs-sidebar
+	a
+		font-size: 1rem
+		&:hover
+			background-color: #ccc
+
+.popover
+    .popover-body
+        background: #1074fb
+        color: #fff
+
+.bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after
+	border-top-color: #554a73

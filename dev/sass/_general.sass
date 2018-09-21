@@ -1,0 +1,85 @@
+//-----------------------------------------------------------------------------------
+// Template Name: GOURMET THEME,
+// Template URI: http://
+// Description: Responsive, lightweight and beautiful Html5 Css3 Boostrap4 Template
+// Author: Vimana Studio
+// Author URI: http://
+// Version: 1.0
+//-----------------------------------------------------------------------------------
+
+// Theme Fonts
+//-------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Montserrat:200,300,400,700,800,900')
+$font1: 'Crimson Text', serif
+$font2: 'Montserrat', sans-serif
+
+// Main Styles
+//-------------------------------------------------
+
+body 
+	background-color: #fff
+	font-family: $font2
+	font-size: 1.2rem
+	color: #000000
+a
+	color: $gray-600
+	text-decoration: none
+	@include transition(0.2s)
+	&:hover
+		color: #ccc
+		text-decoration: none
+p 
+	margin-top: 10px
+	margin-bottom: 15px
+	font-size: 1.2rem
+	line-height: 1.4rem
+	font-family: $font1
+h1,h2,h3,h4,h5
+	font-family: $font2
+	font-weight: 700
+h1
+	font-size: 2.5rem
+h2
+	font-size: 1.8rem
+h3
+	font-size: 1.5rem
+h4
+	font-size: 1.3rem
+h5
+	font-size: 1.2rem
+section
+	padding: 50px 0
+ul
+	padding: 0
+	list-style: none
+
+@media (max-width: 450px)
+	h1
+		font-size: 2rem
+	h2
+		font-size: 1.5rem
+hr
+	width: 100%
+
+// Helpers
+//-------------------------------------------------
+.padding-0
+	padding: 0
+.font-1
+	font-family: $font1
+.font-2
+	font-family: $font2
+.no-box-shadow
+	box-shadow: 0 0 transparent !important
+a.anchor
+	display: block
+	position: relative
+	top: -100px
+	visibility: hidden
+.thin
+	font-weight: 200
+.bold
+	font-weight: 800
+.Hidden
+	display: none

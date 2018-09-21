@@ -1,0 +1,159 @@
+extends includes/master.pug
+block content
+	
+	// ==================
+	//    PAGE CONTENT   
+	// ==================
+	// Bootstrap Carousel
+
+	#carousel-home.carousel.slide.carousel-fade.carousel-full(data-ride="carousel")
+		.carousel-inner
+			.carousel-item.active
+				img.d-block(src="img/slider1.jpeg" alt="First slide")
+				.carousel-content
+					.row
+						.col-md-12.image
+							img(src="img/slider-item2.jpeg").img-fluid
+						.col-md-12.text
+							h4.bold Lorem ipsum dolor sit.
+							span.thin Nobis dolore officia esse natus dolorem eius perferendis ut expedita quibusdam debitis, aliquid corrupti repudiandae rem voluptates molestiae cumque officiis quas accusamus.
+			.carousel-item
+				img.d-block(src="img/slider2.jpeg" alt="First slide")
+				.carousel-content
+					.row
+						.col-md-12.image
+							img(src="img/slider-item1.jpeg").img-fluid
+						.col-md-12.text.dark-text
+							h4.bold Lorem ipsum dolor sit.
+							span.thin Nobis dolore officia esse natus dolorem eius perferendis ut expedita quibusdam debitis, aliquid corrupti repudiandae rem voluptates molestiae cumque officiis quas accusamus.
+		// Carousel Navigation
+		a.carousel-control-prev(href="#carousel-home" role="button" data-slide="prev")
+			.carousel-control-prev-icon(aria-hidden="true")
+			.sr-only Previous
+		a.carousel-control-next(href="#carousel-home" role="button" data-slide="next")
+			.carousel-control-next-icon(aria-hidden="true")
+			.sr-only Next
+
+
+
+	// Main Blog
+	section.blog-main
+		.container
+			.row.inner.wow.fadeIn(data-wow-duration="2s")
+				.col-xs-12.col-sm-12.col-md-8
+					.blog-list
+						.blog-item
+							.image
+								img.img-fluid(src="img/blog-post-2.jpg" alt="Blog Post")
+							.content
+								h2 This is a post
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure voluptas vero aperiam mollitia voluptatibus, accusamus tempora ad voluptatem minus ullam eaque beatae natus deserunt assumenda debitis, perspiciatis, praesentium ipsa nihil!
+								a(href="#") Read more...
+								.share
+									ul
+										li
+											span Share
+										li 
+											a
+												i.fab.fa-facebook
+										li
+											a
+												i.fab.fa-instagram
+										li
+											a
+												i.fab.fa-google-plus-square
+										li
+											a
+												i.fab.fa-twitter-square
+										
+						.blog-item
+							.image
+								img.img-fluid(src="img/blog-post-1.jpg" alt="Blog Post")
+							.content
+								h2 This is another post
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure voluptas vero aperiam mollitia voluptatibus, accusamus tempora ad voluptatem minus ullam eaque beatae natus deserunt assumenda debitis, perspiciatis, praesentium ipsa nihil!
+								a(href="#") Read more...
+								.share
+									ul
+										li 
+											span Share
+										li 
+											a
+												i.fab.fa-facebook
+										li
+											a
+												i.fab.fa-instagram
+										li
+											a
+												i.fab.fa-google-plus-square
+										li
+											a
+												i.fab.fa-twitter-square
+				.col-xs-12.col-sm-12.col-md-4
+					include includes/blog-sidebar
+
+	// Featured Posts
+	section.color-section-2
+		.container
+			.row-centered
+				h1 Featured Posts
+				.carousel-multiple.owl-carousel.blog-featured-posts
+					- var multicarousel = [['img/previous-post-1.jpg', 'This is my journey', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/previous-post-2.jpg', 'Diary of a travel', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/previous-post-3.jpg', 'Shangai', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/previous-post-4.jpg', 'The mountains', 'libero ex dapibus diam expound the actual teachings of the great explorer']]
+					each multicdata in multicarousel
+						.item
+							img(src=multicdata[0] alt='Carousel Item')
+							.content
+								h4 #{multicdata[1]}
+								p #{multicdata[2]}
+								a(href="#") Read more...
+
+
+
+	// Contact Section
+	a.anchor#Contact
+	section.contact-section.contact-widgets
+		.container
+			.row
+				.col-md-4.column
+					h3 Contact Me
+					hr
+					form(method='POST')#contact-form.main-form
+						.form-group
+							input.form-control(name='email' type='email' placeholder='Your E-mail')
+						.form-group
+							textarea#exampleFormControlTextarea1.form-control(name='message' rows='3' placeholder='Leave us a message')
+							small.form-text.text-muted I&apos;ll never share your data.
+						button#submit-btn.btn.btn-secondary(type='submit') Submit
+					#form-thanks.form-response
+						i.fas.fa-check.success
+						p
+							| Thank you for contacting us <br> We will get back to you soon!
+
+					#form-error.form-response
+						i.fas.fa-times.error
+						p
+							| An error has occurred, please contact support.
+				.col-md-4.column
+					h3 Recent Posts
+					hr
+					.widget-recent-post
+						.item
+							h5
+								a(href="#") How to write something.
+								p 25 january 2018
+						.item
+							h5
+								a(href="#") Traveling with my partner.
+								p 15 february 2018
+						.item
+							h5
+								a(href="#") Where to go?.
+								p 10 december 2018
+				.col-md-4.column
+					h3 Subscribe
+					hr
+					form(method='POST')#contact-form.main-form
+						.form-group
+							input.form-control(name='email' type='email' placeholder='Enter your e-mail')
+							button.btn.btn-secondary.btn-block Subscribe !
+					

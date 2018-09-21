@@ -1,0 +1,18 @@
+nav.navbar.fixed-top.navbar-expand
+    a.navbar-brand(href='index.html')
+        // img(src="../img/logo.png", alt="Logo")
+        .site-brand
+            span.bold Tell 
+            span.thin.dark-text Something
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    .collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+            li.nav-item.dropdown
+                a(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").nav-link.dropdown-toggle Components
+                div.dropdown-menu
+                    a(href="/docs/docs.html").dropdown-item Docs
+            li.nav-item
+                a(href="/index.html#Contact").nav-link Contact Us
+            li.nav-item
+                a(href="/index.html").nav-link Home

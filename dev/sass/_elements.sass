@@ -1,0 +1,456 @@
+// CAROUSEL
+// ---------------------------------------
+
+// Bootstrap Carousel full screen
+.carousel-full
+    z-index: 999
+    height: 100vh
+    position: relative
+    .carousel-control-prev,.carousel-control-next
+        padding-bottom: 150px !important
+    .carousel-content
+        position: absolute
+        width: 100%
+        height: 100%
+        margin-top: 20px
+        top: 0
+        left: 0
+        z-index: 9980
+        color: #fff
+        font-family: $font1
+        max-height: 100%
+        @include flex-center
+        .row
+            max-width: 600px
+            .image
+                margin-bottom: 20px
+                img
+                    @include box-shadow-soft()
+    .carousel-item
+        min-height: 300px
+        height: 100vh
+
+
+@media (max-width: 700px)
+    .carousel-full
+        .carousel-content
+            margin-top: 0
+            padding: 0 80px
+            .image
+                max-width: 100%
+
+
+@media (max-width: 500px)
+    .carousel-full .carousel-content
+        padding: 0 40px
+
+// BLOG
+// ---------------------------------------
+.blog-main
+    background-color: $gray-200
+    .blog-list
+        .blog-item
+            @include box-shadow-container()
+            margin-bottom: 30px
+            position: relative
+            .image
+                img
+                    width: 100%
+            .content
+                padding: 20px
+                background-color: #fff
+                text-align: justify
+            
+                h2
+                    font-weight: 700
+                .share
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    ul
+                        padding: 0
+                        margin: 0
+                        padding: 5px 15px
+                        li
+                            font-family: $font2
+                            display: inline
+                            padding: 5px
+                            a
+                                color: $color1
+                            &:hover
+                                cursor: pointer
+                                a
+                                    color: $color3
+                            span
+                                font-size: .8rem
+
+@media (max-width: 1400px)
+    .blog-main .blog-list .blog-item .content
+        padding: 20px 20px 40px
+
+@media (min-width: 769px) and (max-width: 991px) 
+    .blog-main
+        > .container 
+            max-width: 95% !important
+
+// Blog Sidebar
+.blog-sidebar
+    text-align: center
+    .blog-widget
+        margin-bottom: 30px
+        @include box-shadow-container()
+        background-color: #fff
+        padding: 20px
+        font-family: $font2
+        font-size: 1rem
+        .subtitle
+            font-size: 1.1rem
+            margin-bottom: 10px
+    .social
+        .inner
+            // min-width: 150px
+            padding: 0
+            margin: 0
+            .col
+                
+                margin-bottom: 10px
+                padding: 0
+            i
+                width: 45px
+                height: 45px
+                position: relative
+                background: #ccc
+                color: #FFF
+                font-size: 1.2rem
+                text-align: center
+                float: left
+                padding: 14px
+                position: relative
+            span
+                position: absolute
+                left: 50px
+                bottom: 0
+                padding: 5px
+                text-align: left
+                line-height: 18px
+                font-size: 12px
+            .facebook
+                background-color: $facebook
+            .twitter
+                background-color: $twitter
+            .instagram
+                color: #383838
+            .rss
+                background: green
+    .about-me
+        img
+            border-radius: 50%
+            width: 100px
+        p
+            font-size: 1rem
+            text-align: justify
+    .list
+        text-align: left
+        li
+            position: relative
+            .detail
+                font-family: $font2
+                font-size: .8rem
+                position: absolute
+                right: 0
+                top: 0
+                padding: 5px
+    .tags
+        li
+            background-color: $gray-500
+            margin: 2px
+            padding: 5px
+            line-height: 2.5rem
+            a
+                font-size: .9rem
+                color: #fff
+    .polls
+        .content    
+            text-align: left
+    
+@media (min-width: 769px) and (max-width: 1000px) 
+    .blog-sidebar .social .inner
+        i
+            width: 30px
+            height: 30px
+            font-size: .8rem
+            padding: 9px
+        span
+            left: 30px
+            bottom: -9px
+            padding: 5px
+            font-size: 10px
+
+
+.blog-featured-posts
+    .owl-item
+        padding: 10px
+    .item
+        @include box-shadow-btn()
+        background: #fff
+        padding: 0
+        .content
+            padding: 15px
+            p,h4
+                color: #000000
+            a
+                color: #383838
+                font-size: 1rem
+        
+
+// Sorteable Gallery
+// ----------------
+.sortable-gallery
+    .sortable-gallery-filters
+        ul li
+            font-family: $font1
+            font-size: 2rem
+            border-bottom: 1px solid transparent
+            @include transition(0.2s)
+            &:hover
+                cursor: pointer
+                border-bottom: 1px solid #ccc
+    .sortable-gallery-items
+        .item
+            position: relative
+            img
+                max-width: 100%
+            .overlay
+                opacity: 0
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(#fff, .5)
+                @include transition(0.2s)
+            &:hover
+                .overlay
+                    cursor: pointer
+                    opacity: 1
+
+// Section Colors
+// ------------------------------------------------
+.color-section-1
+    background-color: $gray-300;
+    color: #fff
+
+.color-section-2
+    background-color: $gray-200;
+
+// Text Banner
+.text-banner
+    background-color: $gray-200
+
+// Elements 
+//-------------------------------------------------
+.widget-recent-post
+    .item
+        border-bottom: 1px solid rgba(#fff,.2)
+        padding-bottom: 5px
+        margin-bottom: 10px
+        h5,p
+            margin: 0
+        h5
+            font-size: 1rem
+            margin: 0
+        a
+            color: #fff
+            @include transition(0.2s)
+            &:visited,&:active,&:focus
+                color: #fff
+            &:hover
+                color: #ccc
+        p
+            font-family: $font2
+            font-size: 0.9rem
+            font-style: italic
+            font-weight: 400
+            color: #d0d0d0
+
+.horizontal-list
+    text-align: left
+    li
+        display: inline
+
+// Forms
+//-------------------------------------------------
+
+
+// Containers
+//-------------------------------------------------
+
+
+// Decoration
+//-------------------------------------------------
+hr
+    border-top: 1px solid rgba(255, 255, 255, 0.30)
+.dark-hr
+    border-top: 1px solid rgba(0, 0, 0, 0.57)
+.light-hr
+    border-top: 1px solid rgba(255, 255, 255, 0.30)
+.dark-gradient
+    @include linear-gradient(to bottom, $color1, $color2)
+
+.dark-text
+	color: $color1
+.white-text
+	color: #fff
+.dark-bg
+    background: $color1
+.white-bg
+    background: #fff
+
+
+// Texts
+//-------------------------------------------------
+
+.text-muted
+    color: #a9a9a9 !important
+
+
+// Elements
+//-----------------------------------------------    
+
+
+// General PopOver
+// .popover
+//     .popover-body
+//         background: #1074fb
+//         color: #fff
+
+
+// Site Brand
+
+.site-brand,.site-fixed-brand
+    font-family: $font2
+    font-size: 2rem
+    color: #fff
+    .thin
+        font-weight: 300
+    .bold
+        color: $color1
+        font-weight: 800
+        
+.centered-brand
+    @include flex-center-top
+    position: absolute
+    left: 0
+    top: 0
+    padding: 10px
+    width: 100%
+    height: 50px
+    z-index: 9980
+    
+#go-to-top
+    padding: 4px 9px
+    position: fixed
+    right: 26px
+    bottom: 90px
+    border: 1px solid #fff
+    background-color: $color1
+    width: 40px
+    height: 40px
+    color: #fff
+    font-size: 2rem
+    z-index: 9997
+    &:hover,&:active,&:focus
+        color: #fff
+        cursor: pointer
+    
+@media (max-width: 500px)
+    #go-to-top
+        right: 15px
+
+// Theme Options
+//-----------------------------------------------    
+.theme-options
+    position: fixed
+    height: 40px
+    width: 40px
+    left: 10px
+    top: 20%
+    overflow: hidden
+    border-radius: 50%
+    background: #fff
+    @include box-shadow-right()
+    transition: all .5s
+    transition-timing-function: cubic-bezier(0, 0.46, 0.7, 1.33)
+    z-index: 2000
+    padding: 8px
+    .open-icon
+        i
+            font-size: 1.5rem
+            color: #949494
+            -webkit-animation: rotation 10s infinite linear
+            &:hover
+                cursor: pointer
+            
+    .content
+        position: relative
+        display: none
+        width: 0
+        height: 0
+        transition: all .5s
+        // transform: translateX(-500%) translateY(-50%)
+        .item
+            margin-bottom: 10px
+            .sub-title
+                font-size: .9rem
+                font-weight: 600
+                margin-bottom: 5px
+            .text
+                font-size: .8rem
+        .close
+            position: absolute
+            right: -5px
+            top: -30px
+            font-size: 1rem
+        ul.color
+            padding: 0
+            margin: 0
+            li
+                display: inline-block
+                position: relative
+                border-radius: 50%
+                width: 25px
+                height: 25px
+                @include transition(0.2s)
+                &:hover
+                    cursor: pointer
+                    @include box-shadow-btn()
+                .checked
+                    position: absolute
+                    display: none
+                    font-size: 1rem
+                    color: #fff
+                    padding: 2px 4px
+                .true
+                    display: block
+            .theme-dark
+                background-color: $color1
+            .theme-light
+                background-color: $gray-400
+    
+.theme-options-open
+    padding: 35px 10px 10px
+    border-radius: 5px
+    height: auto
+    width: auto
+    top: 15%
+    .content
+        height: auto
+        width: auto
+        display: block
+        // transform: translateX(0) translateY(0%)
+
+@-webkit-keyframes rotation
+	from
+		-webkit-transform: rotate(0deg)
+	to
+		-webkit-transform: rotate(359deg)
